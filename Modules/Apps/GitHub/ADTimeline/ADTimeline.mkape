@@ -1,0 +1,12 @@
+Description: Run ADTimeline
+Category: ADTimeline
+Author: Corentin Soulet
+Version: 1.0
+Id: c2543b32-9c46-40e8-a3ac-ad297cbf73f4
+BinaryUrl: https://github.com/ANSSI-FR/ADTimeline
+ExportFormat: csv
+Processors:
+    -
+        Executable: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+        CommandLine: -ep bypass -File "%kapeDirectory%\\Modules\\bin\\ADTimeline.ps1" -OutputDir %destinationDirectory%\
+        ExportFormat: csv
