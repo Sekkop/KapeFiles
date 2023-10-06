@@ -10,6 +10,10 @@ Processors:
         CommandLine: -Command "Get-WmiObject Win32_Process | Select-Object Name,  ProcessId, CommandLine | Sort Name | Format-Table -Wrap"
         ExportFormat: txt
         ExportFile: processcmdline.txt
+    -
+        Executable: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+        CommandLine: -Command "Get-WmiObject Win32_Process | Select-Object Name,  ProcessId, CommandLine | Sort Name | Export-Csv -Path %destinationDirectory%\processcmdline.csv -NoTypeInformation "
+        ExportFormat: csv
 
 # Documentation
 # https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-wmiobject?view=powershell-5.1

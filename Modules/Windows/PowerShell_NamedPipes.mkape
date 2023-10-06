@@ -10,6 +10,10 @@ Processors:
         CommandLine: -Command "Get-ChildItem -Path '\\.\pipe\' |  Sort Length | Format-Table FullName, Length, IsReadOnly, Exists, CreationTime, LastAccessTime"
         ExportFormat: txt
         ExportFile: pipes.txt
+    -
+        Executable: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+        CommandLine: -Command "Get-ChildItem -Path '\\.\pipe\' |  Sort Length | Select FullName, Length, IsReadOnly, Exists, CreationTime, LastAccessTime | Export-Csv -Path %destinationDirectory%\pipes.csv -NoTypeInformation"
+        ExportFormat: csv
 
 # Documentation
 # https://docs.microsoft.com/en-us/windows/win32/ipc/named-pipes

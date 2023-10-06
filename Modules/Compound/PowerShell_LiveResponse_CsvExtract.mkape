@@ -1,0 +1,89 @@
+Description: Gathers Basic System Information Using PowerShell (Replacing the command net)
+Category: LiveResponse
+Author: Vito Alfano & piesecurity
+Version: 1.1
+Id: 636b05bf-b993-4045-920c-c9c2e4e303d4
+ExportFormat: csv
+Processors:
+    -
+        Executable: PowerShell_Get-InjectedThread.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: PowerShell_ProcessList_WMI.mkape
+        CommandLine: ""
+        ExportFormat: ""
+        ExportFormat: ""
+    -
+        Executable: PowerShell_ProcessList_CimInstance.mkape
+        CommandLine: ""
+        ExportFormat: ""
+        ExportFormat: ""
+    -
+        Executable: PowerShell_Services_List.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    - 
+        Executable: PowerShell_Arp_Cache_Extraction.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    - 
+        Executable: PowerShell_Dns_Cache.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: PowerShell_User_List.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: PowerShell_Local_Group_List.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: PowerShell_LocalAdmin.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: Windows_Net_Accounts.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: PowerShell_SMBOpenFile.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: PowerShell_SMBSession.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: PowerShell_SMBMapping.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: PowerShell_Network_Configuration.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: PowerShell_Network_Share.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: PowerShell_Network_Connection_Status.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    - 
+        Executable: PowerShell_DLL_List.mkape
+        CommandLine: ""
+        ExportFormat: "csv"
+    - 
+        Executable: PowerShell_NamedPipes.mkape
+        CommandLine: ""
+        ExportFormat: "csv"
+    - 
+        Executable: PowerShell_Process_Cmdline.mkape
+        CommandLine: ""
+        ExportFormat: "csv"
+    - 
+        Executable: PowerShell_Startup_Commands.mkape
+        CommandLine: ""
+        ExportFormat: "csv"
