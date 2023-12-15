@@ -1,0 +1,13 @@
+Description: This script allows you to dump the Kernel part of the ram without using any external tool.
+Category: FileSystem
+Author: Corentin Soulet (Sekkop)
+Version: 1.0
+Id: aef84a6b-2215-47bb-af2a-3339b32f7e25
+BinaryUrl: https://github.com/kero99/mftmactime
+ExportFormat: csv
+FileMask: $MFT
+Processors:
+    -
+        Executable: mftmactime.exe
+        CommandLine: -f %sourceFile% -o %destinationDirectory%/mftmactime.csv
+        ExportFormat: csv
